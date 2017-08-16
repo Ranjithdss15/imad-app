@@ -21,7 +21,8 @@ funtion createTemplate (data) {
     var title = data.title;
     var date=   data.date;
     var articlenum= data.articlenum;
-    var para=data.para;
+    var para= data.para;
+    
 var htmlTemplate = `
     <html>
 <head>
@@ -31,22 +32,21 @@ var htmlTemplate = `
 </head> 
 <body class= "margin-page">
     <div class="container">
-      ${articlenum}
+      ${articlenum};
          Welcome to my article which is linked to server.js
        <div>
        <a href="/">Home</a> 
        <hr>
          </div>
          <div>
-       ${date}
+       ${date};
          </div>
         <h3>
-            ${heading3}
+            ${heading3};
         </h3>
         <div>
-        ${para}
+        ${para};
     </div>
-    
 </body>
 </html>
 `;
