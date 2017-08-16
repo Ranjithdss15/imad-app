@@ -22,7 +22,7 @@ function createTemplate (data) {
     var date=   data.date;
     var articlenum= data.articlenum;
     var para= data.para;
-    
+    var heading3= data.heading3;
 var htmlTemplate = `
     <html>
 <head>
