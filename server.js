@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 
 var articlesTree= {
  'article-one': {
-        title:"The first article",
+        title: 'The first article',
         articlenum:"Hello World this is my first article",
         date:"16 Aug, 2017",
         heading3:" This is the heading..",
@@ -52,7 +52,7 @@ function createTemplate (data) {
 var htmlTemplate = `
     <html>
 <head>
-       <title>  </title>
+       <title> ${title} </title>
        <meta name="viewport" content="width=device-width initial-scale=1">
        <link href="/ui/style.css" rel="stylesheet" />
 </head> 
