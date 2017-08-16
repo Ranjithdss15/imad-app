@@ -8,9 +8,9 @@ app.use(morgan('combined'));
 var articlesTree= {
  'article-one': {
         title: 'The first article',
-        articlenum:"Hello World this is my first article",
-        date:"16 Aug, 2017",
-        heading3:" This is the heading..",
+        articlenum:'Hello World this is my first article',
+        date:'16 Aug, 2017',
+        heading3:' This is the heading..',
         para:`
                 <p>This is the content of the first article.
             This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
