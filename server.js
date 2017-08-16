@@ -17,7 +17,7 @@ var articleOne = {
         This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
         `
              };
-funtion createTemplate (data) {
+function createTemplate (data) {
     var title = data.title;
     var date=   data.date;
     var articlenum= data.articlenum;
