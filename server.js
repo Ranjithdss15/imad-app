@@ -5,18 +5,44 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title:"The first article",
-    articlenum:"Hello World this is my first article",
-    date:"16 Aug, 2017",
-    heading3:" This is the heading..",
-    para:`
+var articlesTree= {
+    articleOne: {
+        title:"The first article",
+        articlenum:"Hello World this is my first article",
+        date:"16 Aug, 2017",
+        heading3:" This is the heading..",
+        para:`
+                <p>This is the content of the first article.
+            This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
             <p>This is the content of the first article.
-        This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
-        <p>This is the content of the first article.
-        This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
-        `
-             };
+            This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
+            `
+                 },
+    articleTwo: {
+        title:"The Second article",
+        articlenum:"Hello World this is my first article",
+        date:"16 Aug, 2017",
+        heading3:" This is the heading..",
+        para:`
+                <p>This is the content of the Second article.
+            This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
+            <p>This is the content of the first article.
+            This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
+            `
+                 },
+    articleThree:{
+        title:"The Third article",
+        articlenum:"Hello World this is my first article",
+        date:"16 Aug, 2017",
+        heading3:" This is the heading..",
+        para:`
+                <p>This is the content of the first article.
+            This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
+            <p>This is the content of the first article.
+            This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
+            `
+                 },
+}
 function createTemplate (data) {
     var title = data.title;
     var date=   data.date;
@@ -57,16 +83,21 @@ return htmlTemplate;
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('/article-one', function (req, res) {
-    res.send(createTemplate(articleOne))
+//app.get('/article-one', function (req, res) {
+//    res.send(createTemplate(articleOne))
+//});
+app.get('/:articleTree', function (req, res) {
+    //articleTree= article-one
+    //articleOne=articleTree
+    res.send(createTemplate(createTemplate(articleTree)));
 });
-app.get('/article-two', function (req, res) {
-     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
-});
+//app.get('/article-two', function (req, res) {
+//     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+//});
     
-app.get('/article-three', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-});
+//app.get('/article-three', function (req, res) {
+// res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+//});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
