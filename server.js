@@ -44,7 +44,7 @@ var articlesTree= {
                  },
 };
 function createTemplate(data) {
-    var title = data.title;
+   // var title = data.title;
     var date =   data.date;
     var articlenum = data.articlenum;
     var para = data.para;
