@@ -86,10 +86,10 @@ app.get('/', function (req, res) {
 //app.get('/article-one', function (req, res) {
 //    res.send(createTemplate(articleOne))
 //});
-app.get('/:articlesTree', function (req, res) {
+app.get('/:articlesName', function (req, res) {
     //articleTree= article-one
     //articleOne=articleTree
-    res.send(createTemplate(createTemplate(articleTree)));
+    res.send(createTemplate(createTemplate(articleName)));
 });
 //app.get('/article-two', function (req, res) {
 //     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
