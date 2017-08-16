@@ -89,7 +89,7 @@ app.get('/', function (req, res) {
 app.get('/:articlesName', function (req, res) {
     //articleTree= article-one
     //articleOne=articleTree
-    res.send(createTemplate(createTemplate(articlesName)));
+    res.send(createTemplate(createTemplate(articlesTree[articlesName])));
 });
 //app.get('/article-two', function (req, res) {
 //     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
