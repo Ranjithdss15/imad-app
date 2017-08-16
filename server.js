@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articlesTree= {
-    'article-one': {
+ 'article-one': {
         title:"The first article",
         articlenum:"Hello World this is my first article",
         date:"16 Aug, 2017",
@@ -18,7 +18,7 @@ var articlesTree= {
             This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
             `
                  },
-    'article-Two': {
+'article-Two': {
         title:"The Second article",
         articlenum:"Hello World this is my first article",
         date:"16 Aug, 2017",
@@ -30,7 +30,7 @@ var articlesTree= {
             This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
             `
                  },
-   'article-Three':{
+ 'article-Three':{
         title:"The Third article",
         articlenum:"Hello World this is my first article",
         date:"16 Aug, 2017",
@@ -42,7 +42,7 @@ var articlesTree= {
             This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
             `
                  },
-};
+}
 function createTemplate (data) {
     var title = data.title;
     var date=   data.date;
@@ -86,10 +86,10 @@ app.get('/', function (req, res) {
 //app.get('/article-one', function (req, res) {
 //    res.send(createTemplate(articleOne))
 //});
-app.get('/:articlesName', function (req, res) {
+app.get('/:articleName', function (req, res) {
     //articleTree= article-one
     //articleOne=articleTree
-    res.send(createTemplate(articlesTree[articlesName]));
+    res.send(createTemplate(articlesTree[articleName]));
 });
 //app.get('/article-two', function (req, res) {
 //     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
