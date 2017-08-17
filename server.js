@@ -90,7 +90,7 @@ app.get('/', function (req, res) {
 app.get('/:articleName', function (req, res) {
     //articleTree= article-one
     //articleOne=articleTree
-    var articleName =req.param.articleName;
+    var articleName = req.param.articleName;
     res.send(createTemplate(articlesTree[articleName]));
 });
 //app.get('/article-two', function (req, res) {
