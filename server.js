@@ -19,10 +19,10 @@ var articlesTree = {
             `
                  },
   'articleTwo': {
-        title:"The Second article",
-        articlenum:"Hello World this is my first article",
-        date:"16 Aug, 2017",
-        heading3:" This is the heading..",
+        title:'The Second article',
+        articlenum:'Hello World this is my first article',
+        date:'16 Aug, 2017',
+        heading3:' This is the heading..,
         para:`
                 <p>This is the content of the Second article.
             This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
