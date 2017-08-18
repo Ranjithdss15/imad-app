@@ -20,7 +20,7 @@ var articlesTree = {
                  },
   'articletwo': {
         title:'The Second article',
-        articlenum:'Hello World this is my first article',
+        articlenum:'Hello World this is my Second article',
         date:'16 Aug, 2017',
         heading3:' This is the heading..',
         para:`
@@ -36,10 +36,9 @@ var articlesTree = {
         date:"16 Aug, 2017",
         heading3:" This is the heading..",
         para:`
-                <p>This is the content of the first article.
-            This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
-            <p>This is the content of the first article.
-            This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
+                <p>This is the content of the Third article.
+            This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.</p>
+            <p>This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.This is the content of the Third article.</p>
             `
                  },
 };
