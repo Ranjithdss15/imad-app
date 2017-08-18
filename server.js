@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var articlesTree = {
- 'article-onee': {
+ 'articleonee': {
         title:'The first article',
         articlenum:'Hello World this is my first article',
         date:'16 Aug, 2017',
@@ -18,7 +18,7 @@ var articlesTree = {
             This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
             `
                  },
-  'article-Two': {
+  'articleTwo': {
         title:"The Second article",
         articlenum:"Hello World this is my first article",
         date:"16 Aug, 2017",
@@ -30,7 +30,7 @@ var articlesTree = {
             This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.This is the content of the first article.</p>
             `
                  },
- 'article-Three':{
+ 'articleThree':{
         title:"The Third article",
         articlenum:"Hello World this is my first article",
         date:"16 Aug, 2017",
