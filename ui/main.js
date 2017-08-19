@@ -12,7 +12,7 @@ imageele.onclick = function () {
     
 };*/
 
-var b1element=document.getElementById('b1');
+var b1element= document.getElementById("b1");
 b1element.onclick = function () {
       alert('Started');
 };
