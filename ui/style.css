@@ -21,6 +21,12 @@ body {
 
 .bold {
     font-weight: bold;
+    
+.bstyle {
+    
+width:200px;
+height:50px
+
 }
 
 .img-medium {
