@@ -1,7 +1,7 @@
 console.log('Loaded!');
 var imageele = document.getElementById('image');
 imageele.onclick = function () {
-    imageele.style.marginRight = '100px' ;
+    imageele.style.marginLeft = '100px' ;
 };
 
 
