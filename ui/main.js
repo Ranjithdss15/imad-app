@@ -1,9 +1,5 @@
 console.log('Loaded!');
 
-var b1element= document.getElementById("b1");
-b1element.onclick = function () {
-      alert('Started');
-};
 
 
 var imageele = document.getElementById('image');
@@ -17,6 +13,10 @@ function moveRight() {
 imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     
+};
+var b1element= document.getElementById("b1");
+b1element.onclick = function () {
+      alert('Started');
 };
 
 
