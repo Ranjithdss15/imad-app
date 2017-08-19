@@ -11,11 +11,11 @@ imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     
 };*/
-window.onload = function () {
+
 var b1element=document.getElementById('b1');
 b1element.onclick = function () {
       alert('Started');
-}};
+};
     
 
 /*b1element
