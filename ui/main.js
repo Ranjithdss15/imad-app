@@ -19,8 +19,8 @@ b1element
   
    var b1color=document.getElementsByClassName('body');
   b1color.style.bgcolor= '#f90053';
-    */
-};
+    
+};*/
 //alert('Hi,this is main.js');
 //var element = document.getElementById('main-text');
 //element.innerText = `
