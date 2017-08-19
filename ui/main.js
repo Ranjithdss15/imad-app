@@ -2,11 +2,11 @@ console.log('Loaded!');
 var imageele = document.getElementById('image');
 marginLeft=0;
 function moveRight() {
-    marginLeft += 100;
-    imageele.style.marginLeft = marginLeft='px' ;
+    marginLeft += 10;
+    imageele.style.marginLeft = marginLeft+'px' ;
 }
 imageele.onclick = function () {
-    var interval =setInterval(moveRight,100);
+    var interval =setInterval(moveRight,20);
     
    
 };
