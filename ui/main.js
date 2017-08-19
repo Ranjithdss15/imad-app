@@ -20,7 +20,7 @@ function function1() {
     
       alert('Started');
       
-      var b1color=document.getElementsByClassName('body');
+      var b1color=document.getElementsByClassName('color');
   b1color.style.bgcolor= '#f90053';
 
 }
