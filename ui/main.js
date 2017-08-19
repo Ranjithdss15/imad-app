@@ -2,7 +2,7 @@ console.log('Loaded!');
 var imageele = document.getElementById('image');
 marginLeft=0;
 function moveRight() {
-    marginLeft += 10;
+    marginLeft += 100;
     imageele.style.marginLeft = marginLeft='px' ;
 }
 imageele.onclick = function () {
