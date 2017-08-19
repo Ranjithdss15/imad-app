@@ -12,7 +12,7 @@ function moveRight() {
 imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     };
-var b1element= document.getElementById("b1");
+var b1element= document.getElementById("b1").focus();
 b1element.onclick = function() {
      alert('Started');
     var interval1 =setInterval(function1,50);
