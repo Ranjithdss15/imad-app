@@ -15,9 +15,12 @@ imageele.onclick = function () {
     
 };
 var b1element= document.getElementById("b1");
-b1element.onclick = function () {
+b1element.onclick = function1;
+function function1() {
+    
       alert('Started');
-};
+
+}
 
 
 /*b1element
