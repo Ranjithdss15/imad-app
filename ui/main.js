@@ -1,5 +1,5 @@
 console.log('Loaded!');
-var imageele = document.getElementById('b1');
+var imageele = document.getElementById('image');
 marginLeft=0;
 function moveRight() {
     marginLeft += 50;
@@ -11,10 +11,10 @@ imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     
 };
-var b1element=document.getElementById('image');
+var b1element=document.getElementById('b1');
 b1element.onclick = function () {
       alert('Started');
-}
+};
     
 
 /*b1element
