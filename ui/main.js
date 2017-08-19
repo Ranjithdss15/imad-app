@@ -1,5 +1,5 @@
 console.log('Loaded!');
-var imageele = document.getElementbyId('image');
+var imageele = document.getElementById('image');
 imageele.onclick = function () {
     imageele.style.marginRight = '100px' ;
 };
