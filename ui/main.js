@@ -20,8 +20,10 @@ function function1() {
     
       alert('Started');
       
-      var b1color=document.getElementsByClassName('color');
-  b1color.style.bgcolor= '#f90053';
+      var b1color=document.getElementById('color');
+      var color1;
+  //color1.style.bgcolor= '#f90053';
+   //var c2=document.getElementsByClassName("body");
 
 }
 
