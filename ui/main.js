@@ -1,5 +1,9 @@
 console.log('Loaded!');
-var imageele = 
+var imageele = document.getElementbyid(image);
+image.onclick = function () {
+    image.style.marginRight = '100px' ;
+};
+
 
 //alert('Hi,this is main.js');
 //var element = document.getElementById('main-text');
