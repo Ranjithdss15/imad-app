@@ -4,6 +4,9 @@ marginLeft=0;
 function moveRight() {
     marginLeft += 10;
     imageele.style.marginLeft = marginLeft+'px' ;
+    if(marginLeft== '300px')
+    'break';
+    
 }
 imageele.onclick = function () {
     var interval =setInterval(moveRight,200);
