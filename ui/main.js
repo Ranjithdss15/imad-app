@@ -2,14 +2,14 @@ console.log('Loaded!');
 var imageele = document.getElementById('image');
 marginLeft=0;
 function moveRight() {
-    marginLeft += 10;
+    marginLeft += 50;
     imageele.style.marginLeft = marginLeft+'px' ;
     if(marginLeft== '300px')
     'break';
     
 }
 imageele.onclick = function () {
-    var interval =setInterval(moveRight,200);
+    var interval =setInterval(moveRight,50);
     
    
 };
