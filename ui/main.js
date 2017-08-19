@@ -21,7 +21,7 @@ function function1() {
       alert('Started');
       
       var b1color=document.querySelector("body");
-        b1color.style.backgroundColor= '#f90053';
+        b1color.style.backgroundColor= '#66ff33';
 }
 
 
