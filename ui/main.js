@@ -11,11 +11,11 @@ imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     
 };
-var b1element=document.getElementById('b1').onclick = function () {
+/*var b1element=document.getElementById('b1').onclick = function () {
       alert('Started');
     
 
-/*b1element
+b1element
   
    var b1color=document.getElementsByClassName('body');
   b1color.style.bgcolor= '#f90053';
