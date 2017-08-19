@@ -111,7 +111,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 app.get('/ui/button_start-me.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'button_start-me'));
+  res.sendFile(path.join(__dirname, 'ui', 'button_start-me.png'));
 });
 
 
