@@ -13,10 +13,9 @@ imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     };
 var b1element= document.getElementById("b1");
-b1element.onclick = function2()
-{
+b1element.onclick = function() {
     var interval1 =setInterval(function1,5);
-}
+};
 function function1() {
       alert('Started');
        var interval =setInterval(b1color,50);
