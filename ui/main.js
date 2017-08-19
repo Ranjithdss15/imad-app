@@ -17,10 +17,8 @@ imageele.onclick = function () {
 var b1element= document.getElementById("b1");
 b1element.onclick = function1;
 function function1() {
-    
       alert('Started');
-      
-      var b1color=document.querySelector("body");
+        var b1color=document.querySelector("body");
         b1color.style.backgroundColor= '#66ff33';
 }
 
