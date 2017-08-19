@@ -6,7 +6,7 @@ function moveRight() {
     imageele.style.marginLeft = marginLeft+'px' ;
 }
 imageele.onclick = function () {
-    var interval =setInterval(moveRight,20);
+    var interval =setInterval(moveRight,200);
     
    
 };
