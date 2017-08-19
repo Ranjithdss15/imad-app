@@ -1,6 +1,6 @@
 console.log('Loaded!');
 
-window.onload = function(){
+//window.onload = function(){
 
 var imageele = document.getElementById('image');
 marginLeft=0;
@@ -22,7 +22,7 @@ function function1() {
 
 }
 
-};
+//};
 /*b1element
   
    var b1color=document.getElementsByClassName('body');
