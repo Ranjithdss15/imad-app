@@ -19,6 +19,9 @@ b1element.onclick = function1;
 function function1() {
     
       alert('Started');
+      
+      var b1color=document.getElementsByClassName('body');
+  b1color.style.bgcolor= '#f90053';
 
 }
 
