@@ -87,7 +87,7 @@ app.get('/', function (req, res) {
 //    res.send(createTemplate(articleOne))
 //});
 var counter = 0;
-app.get('/', function (req, res) {
+app.get('/counter', function (req, res) {
     counter+=1;
     res.send(counter.toString());
     });
