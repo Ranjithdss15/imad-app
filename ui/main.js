@@ -23,7 +23,7 @@ function function1() {
         b1color.style.backgroundColor= '#66ff33';
 }
 
-var blikeele  = document.getElementByID("blike");
+var blikeele  = document.getElementById("blike");
 blikeele.onclick = function() {
     alert('Liked');
 };
