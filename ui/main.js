@@ -30,9 +30,15 @@ blikeele.onclick = function() {
     request.onreadystatechange =function() {
         if(request.readyState === XMLHttpRequest.DONE) {
             if(request.status ===200){
-            request.responseText
+            var counter =  request.responseText;
+            var span=document.getElementById('count');
+            span.innerHTML = counter.toString();
+           
         } 
         }
+        request.open('GET', 'HTTP://',true);
+        request.send(null);
+    
 };
 */
 
