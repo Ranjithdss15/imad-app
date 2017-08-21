@@ -23,9 +23,16 @@ function function1() {
         b1color.style.backgroundColor= '#66ff33';
 }
 
-var blikeele  = document.getElementById("blike");
+/*var blikeele  = document.getElementById("blike");
 blikeele.onclick = function() {
     alert('Liked');
+    var request =new XMLHttpRequest();
+    request.onreadystatechange =function() {
+        if(request.readyState === XMLHttpRequest.DONE) {
+            if(request.status ===200){
+            request.responseText
+        } 
+        }
 };
-
+*/
 
