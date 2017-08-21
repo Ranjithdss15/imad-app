@@ -1,5 +1,4 @@
 console.log('Loaded!');
-
 //window.onload = function(){
 var imageele = document.getElementById('image');
 marginLeft=0;
@@ -23,5 +22,10 @@ function function1() {
         var b1color=document.querySelector("body");
         b1color.style.backgroundColor= '#66ff33';
 }
+
+var blikeele  = document.getElementByID("blike");
+blikeele.onclick = function() {
+    alert('Liked');
+};
 
 
