@@ -36,9 +36,11 @@ blikeele.onclick = function() {
            
         } 
         }
-        request.open('GET', 'http://ranjithdss15.imad.hasura-app.io/counter',true);
-        request.send(null);
     };
+        
+        request.open('GET','http://ranjithdss15.imad.hasura-app.io/counter',true);
+        request.send(null);
+
 };
 
 
