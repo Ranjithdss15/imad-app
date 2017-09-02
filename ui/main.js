@@ -23,7 +23,7 @@ function function1() {
         b1color.style.backgroundColor= '#66ff33';
 }
 
-/*var blikeele  = document.getElementById("blike");
+var blikeele  = document.getElementById("blike");
 blikeele.onclick = function() {
     alert('Liked');
     var request =new XMLHttpRequest();
@@ -36,9 +36,9 @@ blikeele.onclick = function() {
            
         } 
         }
-        request.open('GET', 'HTTP://',true);
+        request.open('GET', 'http://ranjithdss15.imad.hasura-app.io/counter',true);
         request.send(null);
-    
+    };
 };
-*/
+
 
