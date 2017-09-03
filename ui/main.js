@@ -46,6 +46,7 @@ blikeele.onclick = function() {
 var comments = document.getElementById('commentinput');
 var listcomments = document.getElementById('commentoutput');
 var list = ' ';
+var temp;
 var submitclick = document.getElementById('commentsubmit');
 submitclick.onclick = function() {
 comments = [ name1, name2,name3,name4];
