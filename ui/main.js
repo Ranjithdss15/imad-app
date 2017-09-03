@@ -52,7 +52,7 @@ for(var temp=0;temp<comments1.length;temp++) {
 }
 listcomments.innerHTML = list;
 */
-};
+}
 
         
         request.open('GET','http://ranjithdss15.imad.hasura-app.io/counter',true);
