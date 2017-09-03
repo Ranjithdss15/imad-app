@@ -1,5 +1,5 @@
 console.log('Loaded!');
-//window.onload = function(){
+window.onload = function(){
 var imageele = document.getElementById('image');
 marginLeft=0;
 function moveRight() {
@@ -58,6 +58,6 @@ for(var temp=0;temp<comments1.length;temp++) {
 listcomments.innerHTML = list;
 */
 };
-
+};
 
 
