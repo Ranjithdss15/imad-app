@@ -44,7 +44,7 @@ blikeele.onclick = function() {
 };
 
 var comments = document.getElementById('commentinput');
-var listcomments = document.getElementById('commentoutput');
+var listcomments = document.getElementById('commentoutput1');
 var list = ' ';
 var submitclick = document.getElementById('commentsubmit');
 submitclick.onclick = function() {
