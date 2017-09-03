@@ -51,7 +51,7 @@ var temp;
 var submitclick = document.getElementById('commentsubmit');
 submitclick.onclick = function() {
 var comments1 = [ 'name1', 'name2','name3','name4'];
-for(temp=0;temp<=comments1.length();temp++) {
+for(temp=0;temp<=comments1.length;temp++) {
     list = list + comments[temp] + '';
 }
 listcomments = list;
