@@ -1,5 +1,5 @@
 console.log('Loaded!');
-window.onload = function(){
+//window.onload = function(){
 var imageele = document.getElementById('image');
 marginLeft=0;
 function moveRight() {
@@ -48,7 +48,6 @@ var listcomments = document.getElementById('commentoutput1');
 var list = ' ';
 var submitclick = document.getElementById('commentsubmit');
 submitclick.onclick = function() {
-alert("Comments here");
 listcomments.innerHTML="Comments here";
 /*var comments1 = [ 'name1', 'name2','name3','name4'];
 for(var temp=0;temp<comments1.length;temp++) {
@@ -58,6 +57,6 @@ for(var temp=0;temp<comments1.length;temp++) {
 listcomments.innerHTML = list;
 */
 };
-};
+
 
 
