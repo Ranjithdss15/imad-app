@@ -37,13 +37,9 @@ blikeele.onclick = function() {
         } 
         }
     };
-        
-        request.open('GET','http://ranjithdss15.imad.hasura-app.io/counter',true);
-        request.send(null);
-
-};
-
-var comments = document.getElementById('commentinput');
+    
+    
+    var comments = document.getElementById('commentinput');
 var listcomments = document.getElementById('commentoutput1');
 var list = ' ';
 var submitclick = document.getElementById('commentsubmit');
@@ -56,6 +52,12 @@ for(var temp=0;temp<comments1.length;temp++) {
 }
 listcomments.innerHTML = list;
 */
+};
+
+        
+        request.open('GET','http://ranjithdss15.imad.hasura-app.io/counter',true);
+        request.send(null);
+
 };
 
 
