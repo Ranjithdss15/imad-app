@@ -105,10 +105,6 @@ app.get('/:articleName', function (req, res) {
 //     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 //});
     
-//app.get('/article-three', function (req, res) {
-// res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
-//});
-
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
@@ -120,7 +116,15 @@ app.get('/ui/button_start-me.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'button_start-me.png'));
 });
 
-
+app.get('/submit-comment/:', function (req, res) {
+    var comments=[];
+    var comment= req.params.comment;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
+    
+    
+    
+});
 // Do not change port, otherwise your app won't run on IMAD servers
 // Use 8080 only for local development if you already have apache running on 80
 
