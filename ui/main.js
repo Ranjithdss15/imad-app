@@ -18,15 +18,12 @@ var list = ' ';
 var submitclick = document.getElementById('commentsubmit');
 submitclick.onclick = function() {
     var listcomments = document.getElementById('commentsoutput');
-   listcomments.innerHTML = "Comments here";
-var comments1 = [ 'name1', 'name2','name3','name4'];
-for(var temp=0;temp<comments1.length;temp++) {
-    list = '<li>' + comments1[temp] + '<li>';
-    
-}
-listcomments.innerHTML = list;
-
-};
+    var comments1 = [ 'name1', 'name2','name3','name4'];
+    for(var temp=0;temp<comments1.length;temp++) {
+        list = '<li>' + comments1[temp] + '<li>';
+          listcomments.innerHTML = list;
+        }
+    };
 var b1element= document.getElementById("b1");
 b1element.onclick = function() {
      alert('Started');
