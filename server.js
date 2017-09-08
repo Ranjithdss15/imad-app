@@ -96,8 +96,8 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
  var comments=[];
-app.get('/submit-comment/:comment', function (req, res) {
-    var comment= req.params.comment;
+app.get('/submit-comment/', function (req, res) {
+    var comment= req.query.comment;
     comments.push(comment);
     res.send(JSON.stringify(comments));
     });
