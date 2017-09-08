@@ -13,7 +13,7 @@ imageele.onclick = function () {
     };
     
 var comments = document.getElementById('commentinput');
-var listcomments = document.getElementById('commentoutput1');
+var listcomments = document.getElementById('commentoutput');
 var list = ' ';
 var submitclick = document.getElementById('commentsubmit');
 submitclick.onclick = function() {
