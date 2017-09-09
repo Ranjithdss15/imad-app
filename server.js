@@ -115,9 +115,9 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-
+   var pool = new Pool(config);
 app.get('/testdb', function (req, res) {
-    var pool = new Pool(config);
+ 
  pool.query('SELECT * FROM test', function(err, result) {
   if (err) {
     //console.log(err.stack);
