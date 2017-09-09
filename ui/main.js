@@ -12,12 +12,13 @@ imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     };
     
-var commentsip = document.getElementById('commentsinput');
+
 var commentsop = document.getElementById('commentsoutput');
-commentsipvalue=commentsip.value;
 var submitclick = document.getElementById('commentsubmit');
    submitclick.onclick = function() {
     //alert('Liked');
+    var commentsip = document.getElementById('commentsinput');
+    commentsipvalue=commentsip.value;
     var request =new XMLHttpRequest();
     request.onreadystatechange =function() {
         if(request.readyState === XMLHttpRequest.DONE) {
@@ -32,7 +33,7 @@ var submitclick = document.getElementById('commentsubmit');
         } 
         }
     };
-        request.open('GET','http://ranjithdss15.imad.hasura-app.io/submit-comment?comment='+commentsip,true);
+        request.open('GET','http://ranjithdss15.imad.hasura-app.io/submit-comment?comment='+commentsipvalue,true);
         request.send(null);
 
 };
