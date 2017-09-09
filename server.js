@@ -117,7 +117,7 @@ app.get('/ui/main.js', function (req, res) {
 
 
 app.get('/testdb', function (req, res) {
-    var pool= new Pool(config);
+    var pool= new Pool('config');
  pool.query('SELECT * FROM test', function(err, result) {
   if (err) {
     //console.log(err.stack);
