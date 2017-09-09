@@ -12,8 +12,8 @@ imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     };
     
-var commentsip = document.getElementById('commentinput');
-var commentsop = document.getElementById('commentoutput');
+var commentsip = document.getElementById('commentsinput');
+var commentsop = document.getElementById('commentsoutput');
 commentsipvalue=commentsip.value;
 var submitclick = document.getElementById('commentsubmit');
    submitclick.onclick = function() {
