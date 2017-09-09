@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var Pool =require('pg').Pool;
+var Pool = require('pg').Pool;
 
 var config = {
  user: 'ranjithdss15',
@@ -108,10 +108,10 @@ var pool= new Pool(config);
 app.get('/testdb', function (req, res) {
  pool.query('SELECT * FROM test', function(err, res) {
   if (err) {
-    console.log(err.stack);
+    //console.log(err.stack);
     res.status(500).send(err.toString());
   } else {
-    console.log(res.rows[0]);
+   // console.log(res.rows[0]);
   res.send(JSON.stringify(result));
   }
 });
