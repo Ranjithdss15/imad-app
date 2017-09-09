@@ -5,7 +5,7 @@ var Pool = require('pg').Pool;
 
 var config = {
 
-  PGHOST: 'http://db.imad.hasura-app.io/database.php?pgsql=localhost%3A5432&username=ranjithdss15&db=ranjithdss15&ns=public',
+  PGHOST: 'http://db.imad.hasura-app.io/',
   PGUSER: 'ranjithdss15',
    PGDATABASE: 'ranjithdss15',
   PGPORT: '5432',  
