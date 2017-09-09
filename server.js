@@ -9,7 +9,7 @@ var config = {
   PGUSER: 'ranjithdss15',
    PGDATABASE: 'ranjithdss15',
   PGPORT: '5432',  
-  PGPASSWORD: process.env.DB_PASSWORD,
+  PGPASSWORD: 'db-ranjithdss15-66848',
   
 /*  
 PGHOST:'http://db.imad.hasura-app.io';
