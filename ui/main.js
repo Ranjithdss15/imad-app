@@ -12,17 +12,37 @@ imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     };
     
-var comments = document.getElementById('commentinput');
+var commentsip = document.getElementById('commentinput');
+commentsipvalue=commentsip.value;
 
-var list = ' ';
 var submitclick = document.getElementById('commentsubmit');
-submitclick.onclick = function() {
-    var listcomments = document.getElementById('commentsoutput');
+/*submitclick.onclick = function() {
+    var commentsop = document.getElementById('commentsoutput');
     var comments1 = [ 'name1', 'name2','name3','name4'];
     for(var temp=0;temp<comments1.length;++temp) {
-         listcomments.innerHTML = ( list += ('<li>' + comments1[temp]));
+         commentsop.innerHTML = ( list += ('<li>' + comments1[temp]));
         }
     };
+    */
+   submitclick.onclick = function() {
+    //alert('Liked');
+    var request =new XMLHttpRequest();
+    request.onreadystatechange =function() {
+        if(request.readyState === XMLHttpRequest.DONE) {
+            if(request.status ===200){
+                var list = ' ';
+            var commentsip =  request.responseText;
+            var comments=JSON.parse(comments);
+      for(var temp=0;temp<comments.length;++temp) {
+        list += ('<li>' + comments[temp]);
+        }
+        } 
+        }
+    };
+        request.open('GET','http://ranjithdss15.imad.hasura-app.io/submit-comment?comment='+commentsip,true);
+        request.send(null);
+
+};
 var b1element= document.getElementById("b1");
 b1element.onclick = function() {
      alert('Started');
@@ -49,16 +69,10 @@ blikeele.onclick = function() {
         } 
         }
     };
-
-    
-    
-
-
-
-        
         request.open('GET','http://ranjithdss15.imad.hasura-app.io/counter',true);
         request.send(null);
 
 };
+
 
 
