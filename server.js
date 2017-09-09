@@ -4,9 +4,10 @@ var path = require('path');
 var Pool = require('pg').Pool;
 
 var config = {
-PGUSER: 'ranjithdss15',
-   PGDATABASE: 'ranjithdss15',
+
   PGHOST: 'http://db.imad.hasura-app.io',
+  PGUSER: 'ranjithdss15',
+   PGDATABASE: 'ranjithdss15',
   PGPORT: '5432',  
   PGPASSWORD: process.env.DB_PASSWORD,
   
