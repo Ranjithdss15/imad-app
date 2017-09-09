@@ -1,17 +1,12 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-//var Pool = require('pg').Pool;
-var  Pool  = require('pg');
 
-var pool = new Pool({
-  user: 'ranjithdss15',
-  host: 'http://db.imad.hasura-app.io/',
-  database: 'ranjithdss15',
-  password: 'db-ranjithdss15-66848',
-  port: '5432',
-});
-/*var config = {
+var app = express();
+app.use(morgan('combined'));
+var Pool = require('pg').Pool;
+
+var config = {
 
   PGHOST: 'http://db.imad.hasura-app.io/',
   PGUSER: 'ranjithdss15',
@@ -19,7 +14,7 @@ var pool = new Pool({
   PGPORT: '5432',  
   PGPASSWORD: 'db-ranjithdss15-66848',
   
-
+/*
 PGHOST:'http://db.imad.hasura-app.io';
 PGUSER:process.env.USER;
 PGDATABASE:process.env.USER;
@@ -28,8 +23,6 @@ PGPORT: 5432;
 */
     
 };
-var app = express();
-app.use(morgan('combined'));
 
 var articlesTree = {
  'articleone': {
