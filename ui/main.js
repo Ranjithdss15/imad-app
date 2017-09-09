@@ -26,7 +26,8 @@ var submitclick = document.getElementById('commentsubmit');
             var comments =  request.responseText;
             comments=JSON.parse(comments);
       for(var temp=0;temp<comments.length;++temp) {
-          commentsop.innerHTML = (    list += ('<li>' + comments[temp]));
+         list += ('<li>' + comments[temp]);
+          commentsop.innerHTML = list.toString();
         }
         } 
         }
