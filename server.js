@@ -2,14 +2,14 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 //var Pool = require('pg').Pool;
-const { Pool, Client } = require('pg');
+var  Pool  = require('pg');
 
-const pool = new Pool({
+var pool = new Pool({
   user: 'ranjithdss15',
   host: 'http://db.imad.hasura-app.io/',
   database: 'ranjithdss15',
   password: 'db-ranjithdss15-66848',
-  port: 5432,
+  port: '5432',
 });
 /*var config = {
 
