@@ -13,6 +13,7 @@ imageele.onclick = function () {
     };
     
 var commentsip = document.getElementById('commentinput');
+var commentsop = document.getElementById('commentoutput');
 commentsipvalue=commentsip.value;
 var submitclick = document.getElementById('commentsubmit');
    submitclick.onclick = function() {
