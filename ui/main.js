@@ -34,7 +34,7 @@ var submitclick = document.getElementById('commentsubmit');
             var commentsip =  request.responseText;
             var comments=JSON.parse(comments);
       for(var temp=0;temp<comments.length;++temp) {
-        list += ('<li>' + comments[temp]);
+          commentsop.innerHTML = (    list += ('<li>' + comments[temp]));
         }
         } 
         }
