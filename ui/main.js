@@ -14,16 +14,7 @@ imageele.onclick = function () {
     
 var commentsip = document.getElementById('commentinput');
 commentsipvalue=commentsip.value;
-
 var submitclick = document.getElementById('commentsubmit');
-/*submitclick.onclick = function() {
-    var commentsop = document.getElementById('commentsoutput');
-    var comments1 = [ 'name1', 'name2','name3','name4'];
-    for(var temp=0;temp<comments1.length;++temp) {
-         commentsop.innerHTML = ( list += ('<li>' + comments1[temp]));
-        }
-    };
-    */
    submitclick.onclick = function() {
     //alert('Liked');
     var request =new XMLHttpRequest();
@@ -31,8 +22,8 @@ var submitclick = document.getElementById('commentsubmit');
         if(request.readyState === XMLHttpRequest.DONE) {
             if(request.status ===200){
                 var list = ' ';
-            var commentsip =  request.responseText;
-            var comments=JSON.parse(comments);
+            var comments =  request.responseText;
+            comments=JSON.parse(comments);
       for(var temp=0;temp<comments.length;++temp) {
           commentsop.innerHTML = (    list += ('<li>' + comments[temp]));
         }
