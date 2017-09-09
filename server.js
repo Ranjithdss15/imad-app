@@ -8,7 +8,7 @@ const pool = new Pool({
   user: 'ranjithdss15',
   host: 'database.server.com',
   database: 'ranjithdss15',
-  password: 'secretpassword',
+  password: 'db-ranjithdss15-66848',
   port: 5432,
 });
 /*var config = {
