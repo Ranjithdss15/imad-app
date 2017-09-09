@@ -31,6 +31,7 @@ var submitclick = document.getElementById('commentsubmit');
           for(var temp=0;temp<comments.length;++temp) {
              list += ('<li>' + comments[temp]);
               commentsop.innerHTML = list.toString();
+              commentsip.innerText="";
             }
             } 
             }
