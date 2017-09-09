@@ -104,7 +104,7 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-var Pool= new Pool(config);
+/*var Pool= new Pool(config);
 app.get('/testdb', function (req, res) {
  Pool.query('SELECT * from test', (err, res) => {
   if (err) {
@@ -116,7 +116,7 @@ app.get('/testdb', function (req, res) {
   }
 });
 });
-
+*/
 var comments=[];
 app.get('/submit-comment/', function (req, res) {
     var comment= req.query.comment;
