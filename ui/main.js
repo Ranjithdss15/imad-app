@@ -12,13 +12,13 @@ imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     };
     
-
+   var commentsip = document.getElementById('commentsinput');
+    commentsipvalue=commentsip.value;
 var commentsop = document.getElementById('commentsoutput');
 var submitclick = document.getElementById('commentsubmit');
    submitclick.onclick = function() {
-    //alert('Liked');
-    var commentsip = document.getElementById('commentsinput');
-    commentsipvalue=commentsip.value;
+
+ 
     var request =new XMLHttpRequest();
     request.onreadystatechange =function() {
         if(request.readyState === XMLHttpRequest.DONE) {
