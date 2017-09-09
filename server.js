@@ -6,7 +6,7 @@ const { Pool, Client } = require('pg');
 
 const pool = new Pool({
   user: 'ranjithdss15',
-  host: 'database.server.com',
+  host: 'http://db.imad.hasura-app.io/',
   database: 'ranjithdss15',
   password: 'db-ranjithdss15-66848',
   port: 5432,
