@@ -122,7 +122,7 @@ app.get('/testdb', function (req, res) {
   if (err) {
     //console.log(err.stack);
     //res.status(500).send(err.toString());
- res.status(500);
+ res.alert("Error");
   } else {
    // console.log(res.rows[0]);
   res.send(JSON.stringify(result));
