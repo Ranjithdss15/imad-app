@@ -101,19 +101,21 @@ var htmlTemplate = `
 `;
     return htmlTemplate;
 }
-app.get('/register', function (req, res) {
-    username = req.body.username;
-    password = req.body.password;
-    
-    res.send(JSON.stringify(comments));
-    });
-    
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 //app.get('/article-one', function (req, res) {
 //    res.send(createTemplate(articleOne))
 //});
+
+app.post('/register', function (req, res) {
+    username = req.body.username;
+    password = req.body.password;
+    
+    res.send(JSON.stringify(comments));
+    });
+    
 var counter = 0;
 app.get('/counter', function (req, res) {
     counter+=1;
