@@ -116,8 +116,17 @@ app.post('/register', function (req, res) {
     
    var dbcred = hash(req.params.passwordinput,salt);
      res.send(hashreturned);
-     pool.query(INSERT INTO cred (username,password) VALUES ($1,$2);
-  
+     pool.query('INSERT INTO cred (username,password) VALUES ($1,$2))' [username,dbcred], function(err,res) {
+         if (err) {
+    //console.log(err.stack);
+    res.status(500).send(err.toString());
+    alert("Error");
+ //res.alert("Error");
+  } else {
+   // console.log(res.rows[0]);
+  res.send(JSON.stringify(result.rows));
+  };
+     }
     });
   
 var counter = 0;
