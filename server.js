@@ -165,7 +165,6 @@ app.get('/password/:passwordinput', function (req, res) {
     var hashreturned = hash(req.params.passwordinput,'This-is-a-unknow-value');
      res.send(hashreturned);
 });
-    
 app.get('/:articleName', function (req, res) {
     //articleTree= article-one
     //articleOne=articleTree
