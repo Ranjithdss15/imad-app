@@ -112,9 +112,11 @@ app.get('/', function (req, res) {
 app.post('/register', function (req, res) {
     username = req.body.username;
     password = req.body.password;
-    var salt = cryto.random();
-   var hashreturned = hash(req.params.passwordinput,salt);
+    var salt = cryto.randomBytes(256);
+    
+   var dbcred = hash(req.params.passwordinput,salt);
      res.send(hashreturned);
+     pool.query(INSERT INTO cred (username,password) VALUES ($1,$2);
   
     });
   
