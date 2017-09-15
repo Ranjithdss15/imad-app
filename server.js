@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 //var Pool = require('pg').Pool;
 var Pool  = require('pg');
 
-const pool = new Pool({
+var pool = new Pool({
   user: 'ranjithdss15',
   host: 'db.imad.hasura-app.io',
   database: 'ranjithdss15',
