@@ -157,7 +157,7 @@ app.get('/submit-comment/', function (req, res) {
     });
     
     function hash(passwordinput,salt) {
-    var hashreturned = hash.pbkdf2Sync(passwordinput,salt, 100000, 512, 'sha512');
+    var hashreturned = crypto.pbkdf2Sync(passwordinput,salt, 100000, 512, 'sha512');
        return hashreturned.toString('hex');
     }
 app.get('/password/:passwordinput', function (req, res) {
