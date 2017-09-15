@@ -6,14 +6,15 @@ var app = express();
 app.use(morgan('combined'));
 var Pool = require('pg').Pool;
 
+
 var config = {
 
-  PGHOST: 'http://db.imad.hasura-app.io/database.php?pgsql=localhost%3A5432&username=ranjithdss15&db=ranjithdss15&ns=public',
+  PGHOST: 'db.imad.hasura-app.io,
   PGUSER: 'ranjithdss15',
    PGDATABASE: 'ranjithdss15',
   PGPORT: '5432',  
   PGPASSWORD: process.env.DB_PASSWORD
-  
+
 /*
 PGHOST:'http://db.imad.hasura-app.io';
 PGUSER:process.env.USER;
