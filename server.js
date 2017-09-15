@@ -122,7 +122,7 @@ app.get('/testdb', function (req, res) {
 pool.query('SELECT NOW()', (err, res) => {
     if (err) {
     //console.log(err.stack);
-    res.status(500).send(err.toString());
+    res.status(502).send(err.toString());
     alert("Error");
   console.log(err, res);
     }
