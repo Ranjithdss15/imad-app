@@ -7,7 +7,7 @@ app.use(morgan('combined'));
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyparser = require('body-parser');
-app.use(bodyparser.JSON);
+app.use(bodyparser.json);
 
 var config = {
   user: 'ranjithdss15',
