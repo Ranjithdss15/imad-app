@@ -140,7 +140,7 @@ app.get('/testdb', function (req, res) {
  //res.alert("Error");
   } else {
    // console.log(res.rows[0]);
-  res.send(JSON.stringify(result));
+  res.send(JSON.stringify(result.columns));
   }
 });
 
