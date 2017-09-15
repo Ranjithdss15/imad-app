@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
-var bodyparser = require('bodyparser');
+//var bodyparser = require('bodyparser');
 
 
 var config = {
