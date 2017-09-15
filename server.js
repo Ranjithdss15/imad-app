@@ -156,6 +156,16 @@ app.get('/submit-comment/', function (req, res) {
     res.send(JSON.stringify(comments));
     });
     
+    function hash(passwordinput,salt) {
+    hashed = pbkdf2(passwordinput,salt);
+hashed.pbkdf2(passwordinput,salt, 100000, 512, 'sha512');
+return hashed;
+}
+app.get('password/:passwordinput', function (req, res) {
+    var hashed = hash(req.params.passwordinput,'This-is-a-unknow-value');
+     res.send(hashed.toString(hex));
+});
+    
 app.get('/:articleName', function (req, res) {
     //articleTree= article-one
     //articleOne=articleTree
@@ -166,16 +176,7 @@ app.get('/:articleName', function (req, res) {
 //     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 //});
     
-function hash(passwordinput,salt) {
-    hashed = pbkdf2(passwordinput,salt);
-hashed.pbkdf2(passwordinput,salt, 100000, 512, 'sha512');
-return hashed;
-}
-app.get('password/:passwordinput', function (req, res) {
-    var hashed = hash(req.params.passwordinput,'This-is-a-unknow-value');
-     res.send(hashed.toString(hex));
-});
-    
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
