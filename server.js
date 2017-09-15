@@ -112,7 +112,8 @@ app.get('/', function (req, res) {
 app.post('/register', function (req, res) {
     username = req.body.username;
     password = req.body.password;
-   
+    var salt = cryto.random();
+   var hashreturned = hash(req.params.passwordinput,salt);
      res.send(hashreturned);
   
     });
