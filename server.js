@@ -4,16 +4,17 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-//var Pool = require('pg').Pool;
-var Pool  = require('pg');
+var Pool = require('pg').Pool;
 
-var pool = new Pool({
+
+
+var config = {
   user: 'ranjithdss15',
   host: 'db.imad.hasura-app.io',
   database: 'ranjithdss15',
   password: process.env.DB_PASSWORD,
   port: 5432,
-});
+};
 
 /*var config = {
 
@@ -117,9 +118,9 @@ app.get('/ui/main.js', function (req, res) {
 });
 
 
-/*app.get('/testdb', function (req, res) {
+app.get('/testdb', function (req, res) {
  
-pool.query('SELECT * FROM test', function (err, res) {
+/*pool.query('SELECT * FROM test', function (err, res) {
     if (err) {
     //console.log(err.stack);
     res.status(502).send(err.toString());
@@ -127,11 +128,11 @@ pool.query('SELECT * FROM test', function (err, res) {
   console.log(err, res);
     }
   pool.end();
-});*/
+});
+*/
 
 
-
-/* pool.query('SELECT * FROM test', function(err, result) {
+ pool.query('SELECT * FROM test', function(err, result) {
   if (err) {
     //console.log(err.stack);
     res.status(500).send(err.toString());
@@ -141,7 +142,7 @@ pool.query('SELECT * FROM test', function (err, res) {
    // console.log(res.rows[0]);
   res.send(JSON.stringify(result));
   }
-});*/
+});
 
 
 });
