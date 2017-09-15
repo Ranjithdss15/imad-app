@@ -4,10 +4,18 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var Pool = require('pg').Pool;
+//var Pool = require('pg').Pool;
+const { Pool, Client } = require('pg');
 
+const pool = new Pool({
+  user: 'ranjithdss15',
+  host: 'db.imad.hasura-app.io',
+  database: 'ranjithdss15',
+  password: process.env.DB_PASSWORD,
+  port: 5432,
+});
 
-var config = {
+/*var config = {
 
   PGHOST: 'db.imad.hasura-app.io',
   PGUSER: 'ranjithdss15',
@@ -15,15 +23,7 @@ var config = {
   PGPORT: '5432',  
   PGPASSWORD: process.env.DB_PASSWORD
 
-/*
-PGHOST:'http://db.imad.hasura-app.io';
-PGUSER:process.env.USER;
-PGDATABASE:process.env.USER;
-PGPASSWORD:null;
-PGPORT: 5432;
-*/
-    
-};
+};*/
 
 var articlesTree = {
  'articleone': {
@@ -116,10 +116,22 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
-   var pool = new Pool(config);
+
 app.get('/testdb', function (req, res) {
  
- pool.query('SELECT * FROM test', function(err, result) {
+pool.query('SELECT NOW()', (err, res) => {
+    if (err) {
+    //console.log(err.stack);
+    res.status(500).send(err.toString());
+    alert("Error");
+  console.log(err, res);
+    }
+  pool.end();
+});
+
+
+
+/* pool.query('SELECT * FROM test', function(err, result) {
   if (err) {
     //console.log(err.stack);
     res.status(500).send(err.toString());
@@ -129,7 +141,9 @@ app.get('/testdb', function (req, res) {
    // console.log(res.rows[0]);
   res.send(JSON.stringify(result));
   }
-});
+});*/
+
+
 });
 
 var comments=[];
