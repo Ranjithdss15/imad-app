@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 //var Pool = require('pg').Pool;
-const { Pool, Client } = require('pg');
+var Pool  = require('pg');
 
 const pool = new Pool({
   user: 'ranjithdss15',
