@@ -6,7 +6,7 @@ var app = express();
 app.use(morgan('combined'));
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
-
+var bodyparser = require('bodyparser');
 
 
 var config = {
@@ -103,7 +103,7 @@ var htmlTemplate = `
 }
 app.get('/register', function (req, res) {
     username = req.body.username;
-    password = req.body.password;.
+    password = req.body.password;
     
     res.send(JSON.stringify(comments));
     });
