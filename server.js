@@ -6,8 +6,8 @@ var app = express();
 app.use(morgan('combined'));
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
-//var bodyparser = require('bodyparser');
-
+var bodyparser = require('body-parser');
+app.use(bodyparser.JSON);
 
 var config = {
   user: 'ranjithdss15',
@@ -124,7 +124,7 @@ app.post('/register', function (req, res) {
  //res.alert("Error");
   } else {
    // console.log(res.rows[0]);
-  res.send(JSON.stringify(result.rows));
+  res.send("Register");
   }
   
      });
