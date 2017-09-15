@@ -160,6 +160,7 @@ app.get('/submit-comment/', function (req, res) {
   //  hashed = crypto.pbkdf2(passwordinput,salt);
   
     var hashreturned = hash.pbkdf2Sync(passwordinput,salt, 100000, 512, 'sha512');
+   
     return hashreturned.toString('hex');
 
 }
