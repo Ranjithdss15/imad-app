@@ -109,13 +109,13 @@ app.get('/', function (req, res) {
 //    res.send(createTemplate(articleOne))
 //});
 
-app.post('/register', function (req, res) {
+/*app.post('/register', function (req, res) {
     username = req.body.username;
     password = req.body.password;
     
     res.send(JSON.stringify(comments));
     });
-    
+  */  
 var counter = 0;
 app.get('/counter', function (req, res) {
     counter+=1;
