@@ -117,7 +117,7 @@ app.get('/ui/main.js', function (req, res) {
 });
 
 
-app.get('/testdb', function (req, res) {
+/*app.get('/testdb', function (req, res) {
  
 pool.query('SELECT * FROM test', function (err, res) {
     if (err) {
@@ -127,7 +127,7 @@ pool.query('SELECT * FROM test', function (err, res) {
   console.log(err, res);
     }
   pool.end();
-});
+});*/
 
 
 
