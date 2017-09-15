@@ -125,9 +125,9 @@ app.post('/register', function (req, res) {
   } else {
    // console.log(res.rows[0]);
   res.send(JSON.stringify(result.rows));
-  };
+  }
   
-     }
+     });
     });
   
 var counter = 0;
