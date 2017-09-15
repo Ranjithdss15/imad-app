@@ -161,10 +161,10 @@ app.get('/submit-comment/', function (req, res) {
     var hashreturned = hashed.pbkdf2(passwordinput,salt, 100000, 512, 'sha512');
     return hashreturned.toString('hex');
 
-}
+};
 app.get('password/:passwordinput', function (req, res) {
     var hashed = hash(req.params.passwordinput,'This-is-a-unknow-value');
-     res.send(hashreturned;
+     res.send(hashreturned);
 });
     
 app.get('/:articleName', function (req, res) {
