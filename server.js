@@ -153,7 +153,7 @@ app.get('/submit-comment/', function (req, res) {
     
     function hash(passwordinput,salt) {
     var hashreturned = crypto.pbkdf2Sync(passwordinput,salt, 100000, 512, 'sha512');
-       return ("pbkdf2","100000",salt,hashreturned.toString('hex'));
+       return ["pbkdf2","100000",salt,hashreturned.toString('hex')];
     }
 app.get('/password/:passwordinput', function (req, res) {
     var hashreturned = hash(req.params.passwordinput,'This-is-a-unknow-value');
