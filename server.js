@@ -5,6 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var Pool = require('pg').Pool;
+var crypto = require('crypto');
 
 
 
@@ -145,6 +146,7 @@ app.get('/testdb', function (req, res) {
 });
 
 
+
 });
 
 var comments=[];
@@ -163,6 +165,16 @@ app.get('/:articleName', function (req, res) {
 //app.get('/article-two', function (req, res) {
 //     res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
 //});
+    
+function hash(passwordinput,salt) {
+    hashed = pbkdf2(passwordinput,salt);
+hashed.pbkdf2(passwordinput,salt, 100000, 512, 'sha512');
+return hashed;
+}
+app.get('password/:passwordinput', function (req, res) {
+    var hashed = hash(req.params.passwordinput,'This-is-a-unknow-value');
+     res.send(hashed.toString(hex));
+});
     
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
