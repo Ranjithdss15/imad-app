@@ -101,7 +101,13 @@ var htmlTemplate = `
 `;
     return htmlTemplate;
 }
-
+app.get('/register', function (req, res) {
+    username = req.body.username;
+    password = req.body.password;.
+    
+    res.send(JSON.stringify(comments));
+    });
+    
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -120,17 +126,6 @@ app.get('/ui/main.js', function (req, res) {
 
 var pool = new Pool(config);
 app.get('/testdb', function (req, res) {
- 
-/*pool.query('SELECT * FROM test', function (err, res) {
-    if (err) {
-    //console.log(err.stack);
-    res.status(502).send(err.toString());
-    alert("Error");
-  console.log(err, res);
-    }
-  pool.end();
-});
-*/
 
 
  pool.query('SELECT * FROM test NAME order by Name', function(err, result) {
@@ -144,9 +139,6 @@ app.get('/testdb', function (req, res) {
   res.send(JSON.stringify(result.rows));
   }
 });
-
-
-
 });
 
 var comments=[];
