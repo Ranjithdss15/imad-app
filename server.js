@@ -132,7 +132,7 @@ app.get('/testdb', function (req, res) {
 */
 
 
- pool.query('SELECT * FROM NAME = ranjith', function(err, result) {
+ pool.query('SELECT * FROM order by Name', function(err, result) {
   if (err) {
     //console.log(err.stack);
     res.status(500).send(err.toString());
