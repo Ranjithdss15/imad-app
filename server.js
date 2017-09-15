@@ -109,13 +109,14 @@ app.get('/', function (req, res) {
 //    res.send(createTemplate(articleOne))
 //});
 
-/*app.post('/register', function (req, res) {
+app.post('/register', function (req, res) {
     username = req.body.username;
     password = req.body.password;
-    
-    res.send(JSON.stringify(comments));
+   
+     res.send(hashreturned);
+  
     });
-  */  
+  
 var counter = 0;
 app.get('/counter', function (req, res) {
     counter+=1;
@@ -152,7 +153,7 @@ app.get('/submit-comment/', function (req, res) {
     
     function hash(passwordinput,salt) {
     var hashreturned = crypto.pbkdf2Sync(passwordinput,salt, 100000, 512, 'sha512');
-       return hashreturned.toString('hex');
+       return (pbkdf2,100000,salt,hashreturned.toString('hex'));
     }
 app.get('/password/:passwordinput', function (req, res) {
     var hashreturned = hash(req.params.passwordinput,'This-is-a-unknow-value');
