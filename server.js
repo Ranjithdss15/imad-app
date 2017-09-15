@@ -163,7 +163,7 @@ app.get('/submit-comment/', function (req, res) {
 
 }
 app.get('password/:passwordinput', function (req, res) {
-    var hashed = hash(req.params.passwordinput,'This-is-a-unknow-value');
+    var hashreturned = hash(req.params.passwordinput,'This-is-a-unknow-value');
      res.send(hashreturned);
 });
     
