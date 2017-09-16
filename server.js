@@ -109,25 +109,7 @@ app.get('/', function (req, res) {
 //    res.send(createTemplate(articleOne))
 //});
 
-app.post('/register', function (req, res) {
-    username = req.body.username;
-    password = req.body.password;
-    var salt = cryto.randomByte(128).toString('hex');
-   var dbcred = hash(req.params.passwordinput,salt);
-     res.send(hashreturned);
-     pool.query('INSERT INTO cred (username,password) VALUES ($1,$2)', [username,dbcred], function(err,res) {
-         if (err) {
-    //console.log(err.stack);
-    res.status(500).send(err.toString());
-    alert("Error");
- //res.alert("Error");
-  } else {
-   // console.log(res.rows[0]);
-  res.send("Register");
-  }
-  
-     });
-    });
+
   
 var counter = 0;
 app.get('/counter', function (req, res) {
@@ -167,6 +149,27 @@ app.get('/submit-comment/', function (req, res) {
     var hashreturned = crypto.pbkdf2Sync(passwordinput,salt, 100000, 512, 'sha512');
        return ["pbkdf2","100000",salt,hashreturned.toString('hex')].join('$');
     }
+    
+    app.post('/register', function (req, res) {
+    username = req.body.username;
+    password = req.body.password;
+    var salt = cryto.randomByte(128).toString('hex');
+   var dbcred = hash(req.params.passwordinput,salt);
+     res.send(hashreturned);
+     pool.query('INSERT INTO cred (username,password) VALUES ($1,$2)', [username,dbcred], function(err,res) {
+         if (err) {
+    //console.log(err.stack);
+    res.status(500).send(err.toString());
+    alert("Error");
+ //res.alert("Error");
+  } else {
+   // console.log(res.rows[0]);
+  res.send("Register");
+  }
+  
+     });
+    });
+    
 app.get('/password/:passwordinput', function (req, res) {
     var hashreturned = hash(req.params.passwordinput,'This-is-a-unknow-value');
      res.send(hashreturned);
