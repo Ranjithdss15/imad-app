@@ -156,7 +156,7 @@ app.get('/submit-comment/', function (req, res) {
     var salt = cryto.randomByte(128).toString('hex');
    var dbcred = hash(req.params.passwordinput,salt);
      res.send(hashreturned);
-     pool.query('INSERT INTO cred (username,password) VALUES ($1,$2)', [username,dbcred], function(err,res) {
+     pool.query('INSERT INTO "cred" (username,password) VALUES ($1,$2)', [username,dbcred], function(err,res) {
          if (err) {
     //console.log(err.stack);
     res.status(500).send(err.toString());
