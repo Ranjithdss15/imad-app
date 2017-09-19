@@ -94,7 +94,7 @@ submitelement.onclick = function() {
      console.log(username);
     console.log(password); 
     request.open('POST','http://ranjithdss15.imad.hasura-app.io/register',true);
-    request.setRequestHeader('Content-type','application/json');
+    request.setRequestHeader('Content-Type','application/json');
         request.send(JSON.stringify({username:username, password:password}));
         
 
