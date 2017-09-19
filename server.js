@@ -153,10 +153,13 @@ app.get('/submit-comment/', function (req, res) {
     app.post('/register', function (req, res) {
     username = req.body.username;
     password = req.body.password;
+    console.log("r1");
     var salt = cryto.randomByte(128).toString('hex');
    var dbcred = hash(req.params.passwordinput,salt);
      res.send(hashreturned);
+    console.log("r2");
      pool.query('INSERT INTO "cred" (username,password) VALUES ($1,$2)', [username,dbcred], function(err,res) {
+         console.log("r3");
          if (err) {
     //console.log(err.stack);
     res.status(500).send(err.toString());
