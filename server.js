@@ -154,7 +154,7 @@ app.get('/submit-comment/', function (req, res) {
         
         console.logs("regiteration module");
    
-   /*username = req.body.username;
+   username = req.body.username;
     password = req.body.password;
     console.log("r1");
     var salt = cryto.randomByte(128).toString('hex');
@@ -173,7 +173,7 @@ app.get('/submit-comment/', function (req, res) {
   res.send("Register");
   }
   
-     });*/
+     });
     });
     
 app.get('/password/:passwordinput', function (req, res) {
