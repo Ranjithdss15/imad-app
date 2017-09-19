@@ -151,13 +151,11 @@ app.get('/submit-comment/', function (req, res) {
     }
     
     app.post('/register', function (req, res) {
-        
-        console.log("regiteration module");
-   
-   username = req.body.username;
+    console.log("regiteration module");
+    username = req.body.username;
     password = req.body.password;
     console.log("r1");
-    var salt = cryto.randomByte(128).toString('hex');
+    var salt = crypto.randomByte(128).toString('hex');
    var dbcred = hash(req.params.passwordinput,salt);
      res.send(hashreturned);
     console.log("r2");
