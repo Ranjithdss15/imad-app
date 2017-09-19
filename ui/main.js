@@ -71,5 +71,27 @@ blikeele.onclick = function() {
 
 };
 
+var Submitelement= document.getElementById("Submit");
+Submit.onclick = function() {
+    var request =new XMLHttpRequest();
+    request.onreadystatechange =function() {
+        if(request.readyState === XMLHttpRequest.DONE) {
+            if(request.status ===200){
+            alert("Registration done!");
+            }    
+            else if (request.status ===403) {
+              alert("Forbidden");
+             } 
+            else if (request.status ===500){
+                alert("Internal server Error");
+            } 
+        }
+    };
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    request.open('POST','http://ranjithdss15.imad.hasura-app.io/register',true);
+        request.send(JSON.stringify({username:username,password:password}));
+        
 
+};
 
