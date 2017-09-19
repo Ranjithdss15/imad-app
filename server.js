@@ -151,6 +151,7 @@ app.get('/submit-comment/', function (req, res) {
     }
     
     app.post('/register', function (req, res) {
+        alert("into the module");
     console.log("regiteration module");
     username = req.body.username;
     password = req.body.password;
