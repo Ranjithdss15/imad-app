@@ -73,7 +73,7 @@ blikeele.onclick = function() {
 
 var Submitelement= document.getElementById("Submit");
 Submit.onclick = function() {
-     console("Registration");
+     console.log("Registration");
     var request =new XMLHttpRequest();
     request.onreadystatechange =function() {
         alert("Registration started");
