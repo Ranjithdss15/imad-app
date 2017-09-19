@@ -89,6 +89,8 @@ Submit.onclick = function() {
     };
     var username = document.getElementById("uname").value;
     var password = document.getElementById("pwrd").value;
+    console(username);
+    console(password);
     request.open('POST','http://ranjithdss15.imad.hasura-app.io/register',true);
         request.send(JSON.stringify({username:username,password:password}));
         
