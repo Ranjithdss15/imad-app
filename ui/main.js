@@ -73,7 +73,6 @@ blikeele.onclick = function() {
 
 var Submitelement= document.getElementById("Submit");
 Submit.onclick = function() {
-     console.log("Registration");
     var request =new XMLHttpRequest();
     request.onreadystatechange =function() {
         alert("Registration started");
@@ -91,10 +90,9 @@ Submit.onclick = function() {
     };
     var username = document.getElementById("uname").value;
     var password = document.getElementById("pwrd").value;
-    console.log(username);
-    console.log(password);
     request.open('POST','http://ranjithdss15.imad.hasura-app.io/register',true);
-        request.send(JSON.stringify({username:username,password:password}));
+    request.setRequestHeader('Content-type','application/json');
+        request.send(JSON.stringify({username:username, password:password}));
         
 
 };
