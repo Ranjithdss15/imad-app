@@ -72,7 +72,7 @@ blikeele.onclick = function() {
 };
 
 var Submitelement= document.getElementById("Submit");
-Submit.onclick = function() {
+Submitelement.onclick = function() {
     var request =new XMLHttpRequest();
     request.onreadystatechange =function() {
      
