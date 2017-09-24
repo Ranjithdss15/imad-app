@@ -179,7 +179,7 @@ app.get('/password/:passwordinput', function (req, res) {
      res.send(hashreturned);
      var username = "ranjith";
      
-         pool.query('INSERT INTO "cred" (username,password) VALUES ($2,$3)', [username,hashreturned], function(err,res) {
+         pool.query('INSERT INTO "cred" (username,password) VALUES ($1,$2)', [username,hashreturned], function(err,res) {
          console.log("r3");
          if (err) {
     //console.log(err.stack);
