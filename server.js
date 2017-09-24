@@ -156,8 +156,8 @@ app.get('/submit-comment/', function (req, res) {
     username = req.body.username;
     password = req.body.password;
     console.log("r1");
- //   var salt = crypto.randomBytes(128).toString('hex');
-   //var dbcred = hash(password,salt);
+    var salt = crypto.randomBytes(128).toString('hex');
+   var dbcred = hash(password,salt);
     console.log("r2");
      pool.query('INSERT INTO "cred" (username,password) VALUES ($1,$2)', [username,password], function(err,res) {
          console.log("r3");
@@ -178,7 +178,6 @@ app.get('/password/:passwordinput', function (req, res) {
     var hashreturned = hash(req.params.passwordinput,'This-is-a-unknow-value');
      res.send(hashreturned);
      var username = "ranjith";
-     
          pool.query('INSERT INTO "cred" (username,password) VALUES ($1,$2)', [username,hashreturned], function(err,res) {
          console.log("r3");
          if (err) {
