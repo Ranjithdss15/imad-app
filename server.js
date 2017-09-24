@@ -177,6 +177,21 @@ app.get('/submit-comment/', function (req, res) {
 app.get('/password/:passwordinput', function (req, res) {
     var hashreturned = hash(req.params.passwordinput,'This-is-a-unknow-value');
      res.send(hashreturned);
+     var username = ranjith;
+     
+         pool.query('INSERT INTO "cred" (username,password) VALUES ($2,$3)', [username,hashreturned], function(err,res) {
+         console.log("r3");
+         if (err) {
+    //console.log(err.stack);
+    res.status(500).send(err.toString());
+    alert("Error");
+ //res.alert("Error");
+  } else {
+   // console.log(res.rows[0]);
+  res.send("Register");
+  }
+  
+     });
 });
 app.get('/:articleName', function (req, res) {
     //articleTree= article-one
