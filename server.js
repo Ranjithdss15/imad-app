@@ -157,7 +157,7 @@ app.get('/submit-comment/', function (req, res) {
     password = req.body.password;
     console.log("r1");
     var salt = crypto.randomBytes(128).toString('hex');
-   var dbcred = hash(req.params.passwordinput,salt);
+   var dbcred = hash(password,salt);
      res.send(hashreturned);
     console.log("r2");
      pool.query('INSERT INTO "cred" (username,password) VALUES ($1,$2)', [username,dbcred], function(err,res) {
