@@ -151,7 +151,6 @@ app.get('/submit-comment/', function (req, res) {
     }
     
     app.post('/register', function (req, res) {
-  //      alert("into the module");
     console.log("regiteration module");
     username = req.body.username;
     password = req.body.password;
@@ -168,6 +167,25 @@ app.get('/submit-comment/', function (req, res) {
  //res.alert("Error");
   } else {
    // console.log(res.rows[0]);
+  res.send("Register");
+  }
+  
+     });
+    });
+    
+     app.post('/login', function (req, res) {
+    username = req.body.username;
+    password = req.body.password;
+    var salt = crypto.randomBytes(128).toString('hex');
+   var dbcred = hash(password,salt);
+     pool.query('SELECT * FROM "cred" WHERE "username" = $1 AND "password" = $2', [username,dbcred], function(err,res) {
+         if (err) {
+    //console.log(err.stack);
+    res.status(500).send(err.toString());
+    alert("Error");
+ //res.alert("Error");
+  } else {
+ 
   res.send("Register");
   }
   
