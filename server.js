@@ -177,7 +177,7 @@ app.get('/submit-comment/', function (req, res) {
 app.get('/password/:passwordinput', function (req, res) {
     var hashreturned = hash(req.params.passwordinput,'This-is-a-unknow-value');
      res.send(hashreturned);
-     var username = ranjith;
+     var username = "ranjith";
      
          pool.query('INSERT INTO "cred" (username,password) VALUES ($2,$3)', [username,hashreturned], function(err,res) {
          console.log("r3");
