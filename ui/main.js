@@ -100,3 +100,32 @@ submitelement.onclick = function() {
 
 };
 
+
+var submitelement= document.getElementById("login");
+submitelement.onclick = function() {
+    var request =new XMLHttpRequest();
+     
+    request.onreadystatechange =function() {
+     console.log("registration started");
+        if(request.readyState === XMLHttpRequest.DONE) {
+            if(request.status ===200){
+            alert("Registration done!");
+            }    
+            else if (request.status ===403) {
+              alert("Forbidden");
+             } 
+            else if (request.status ===500){
+                alert("Internal server Error");
+            } 
+        }
+    };
+    var username = document.getElementById("unamelogin").value;
+    var password = document.getElementById("pwrdlogin").value;
+     console.log(username);
+    console.log(password); 
+    request.open('POST','http://ranjithdss15.imad.hasura-app.io/login',true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username:username, password:password}));
+        
+
+};
