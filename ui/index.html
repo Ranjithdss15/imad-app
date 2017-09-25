@@ -34,9 +34,18 @@
         
          <div>
        <a href="/Maps">Google Maps</a> 
-       <hr>
          </div>
-        
+        <div align ="center">
+            <script> src="https://connect.soundcloud.com/sdk/sdk-3.2.1.js"></script>
+<script>
+SC.initialize({ client_id: 'YOUR_CLIENT_ID'});
+var track_url = 'https://soundcloud.com/ranjith_doss/nee-partha-vizhigal';
+SC.oEmbed(track_url, { auto_play: true }).then(function(oEmbed) {
+  console.log('oEmbed response: ', oEmbed);
+});
+
+</script>
+        </div>
         <div class="center">
             <br>
             <br>
