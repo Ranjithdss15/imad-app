@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.URLshortner
+{
+	background-image: url(URLshortner_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-size:cover;
+}
