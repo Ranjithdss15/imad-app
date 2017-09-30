@@ -12,12 +12,6 @@ imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     };
   */  
-var shortenB = document.getElementById('shorten');
-shortenB.onclick = function() {
-    alert("Loaded");
-var urltext = document.getElementById("url").value;
-};
-
 var commentsop = document.getElementById('commentsoutput');
 var submitclick = document.getElementById('commentsubmit');
    submitclick.onclick = function() {
