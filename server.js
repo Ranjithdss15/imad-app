@@ -165,7 +165,7 @@ app.get('/submit-comment/', function (req, res) {
     app.get('/surl', function (req, res) {
 
  //  var extension = req.params.extension;
-    alert("extension");
+ 
     pool.query('SELECT * FROM test order by "shorturls"', function(err,res) {
          if (err) {
     res.status(500).send(err.toString());
