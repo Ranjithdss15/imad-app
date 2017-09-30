@@ -149,7 +149,7 @@ app.get('/testdb', function (req, res) {
 //http://ranjithdss15.imad.hasura-app.io/submit-comment?comment=comment3
 var comments=[];
 app.get('/submit-comment/', function (req, res) {
-    var comment3= req.query.comment;
+    var comment3= req.query.comment2;
     comments.push(comment3);
     res.send(JSON.stringify(comments));
     });
