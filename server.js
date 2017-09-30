@@ -109,7 +109,7 @@ app.get('/', function (req, res) {
 //    res.send(createTemplate(articleOne))
 //});
 app.get('/shortURLs', function(req, res){
-    res.sendFile(path.join(_dirname,'ui','URLshortner.html'));
+    res.sendFile(path.join(__dirname,'ui','URLshortner.html'));
 });
 app.get('/Maps', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'gmaps.html'));
