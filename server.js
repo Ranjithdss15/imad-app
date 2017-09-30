@@ -159,6 +159,27 @@ app.get('/submit-comment/', function (req, res) {
        return ["pbkdf2","100000",salt,hashreturned.toString('hex')].join('$');
     }
     
+    
+    
+     
+    app.get('/surl', function (req, res) {
+
+ //  var extension = req.params.extension;
+    alert("extension");
+    pool.query('SELECT * FROM test order by "shorturls"', function(err,res) {
+         if (err) {
+    res.status(500).send(err.toString());
+    alert("Error");
+
+  } else {
+  res.send("Register");
+  }
+     });
+});
+    
+    
+    
+    
     app.post('/register', function (req, res) {
     console.log("regiteration module");
     username = req.body.username;
@@ -200,21 +221,7 @@ app.get('/submit-comment/', function (req, res) {
     });
     
     
-    
-    app.get('/surl/:extension', function (req, res) {
-
-    var extension = req.params.extension;
-    alert("extension");
-    pool.query('SELECT * FROM test order by "shorturls"', function(err,res) {
-         if (err) {
-    res.status(500).send(err.toString());
-    alert("Error");
-
-  } else {
-  res.send("Register");
-  }
-     });
-});
+   
     
     
     
