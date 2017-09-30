@@ -207,7 +207,7 @@ app.get('/submit-comment/', function (req, res) {
     
     
     
-    app.get('/sURL/:extension', function (req, res) {
+    app.get('/surl/:extension', function (req, res) {
 
     var extension = req.params.extension;
     alert("extension");
