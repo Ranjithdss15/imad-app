@@ -126,6 +126,9 @@ submitelement.onclick = function() {
     request.open('POST','http://ranjithdss15.imad.hasura-app.io/login',true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({username:username, password:password}));
-        
-
+        };
+  var shortenB = document.getElementById('shorten');
+shortenB.onclick = function() {
+    alert("Loaded");
+var urltext = document.getElementById("url").value;
 };
