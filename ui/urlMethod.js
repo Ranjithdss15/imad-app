@@ -1,7 +1,7 @@
 
 console.log("URL method loaded");
 var test = document.getElementById('shorten');
-shorten.onClick = function() {
+test.onClick = function() {
     alert("Loaded");
     
 };
