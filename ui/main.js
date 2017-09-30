@@ -71,6 +71,10 @@ blikeele.onclick = function() {
 var shortenB = document.getElementById('shorten');
 shortenB.onclick =function () {
     alert("test");
+    var urltext = document.getElementById("url").value;
+    var exttext = document.getElementById("ext").value;
+    console.log(urltext);
+    
 };
 
 var submitelement= document.getElementById("Submit");
