@@ -181,6 +181,12 @@ app.get('/submit-comment/', function (req, res) {
      });
     });
     
+    app.get('/sURL/:urlextension', function (req, res) {
+        
+           var articleName = req.params.articleName;
+    });
+    
+    
      app.post('/login', function (req, res) {
     username = req.body.username;
     password = req.body.password;
