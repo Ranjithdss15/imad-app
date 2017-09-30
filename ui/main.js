@@ -1,6 +1,6 @@
 console.log('Loaded!');
 //window.onload = function(){
-var imageele = document.getElementById('image');
+/*var imageele = document.getElementById('image');
 marginLeft=0;
 function moveRight() {
     marginLeft += 50;
@@ -11,7 +11,7 @@ function moveRight() {
 imageele.onclick = function () {
     var interval =setInterval(moveRight,50);
     };
-    
+  */  
 var shortenB = document.getElementById('shorten');
 shortenB.onclick = function() {
     alert("Loaded");
