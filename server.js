@@ -125,7 +125,7 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 app.get('/ui/urlMethod.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+  res.sendFile(path.join(__dirname, 'ui', 'urlMethod.js'));
 });
 
 
@@ -146,6 +146,7 @@ app.get('/testdb', function (req, res) {
 });
 });
 
+//http://ranjithdss15.imad.hasura-app.io/submit-comment?comment=comment3
 var comments=[];
 app.get('/submit-comment/', function (req, res) {
     var comment= req.query.comment;
