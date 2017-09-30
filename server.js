@@ -200,12 +200,28 @@ app.get('/submit-comment/', function (req, res) {
     alert("Error");
  //res.alert("Error");
   } else {
- 
   res.send("Register");
   }
-  
      });
     });
+    
+    
+    
+    app.get('/sURL/:extension', function (req, res) {
+
+    var extension = req.params.extension;
+    pool.query('SELECT * FROM test order by "shorturls"', function(err,res) {
+         if (err) {
+    res.status(500).send(err.toString());
+    alert("Error");
+
+  } else {
+  res.send("Register");
+  }
+     });
+});
+    
+    
     
 app.get('/password/:passwordinput', function (req, res) {
     var hashreturned = hash(req.params.passwordinput,'This-is-a-unknow-value');
