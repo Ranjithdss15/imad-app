@@ -74,6 +74,7 @@ shortenB.onclick =function () {
     var urltext = document.getElementById("url").value;
     var exttext = document.getElementById("ext").value;
     console.log(urltext);
+     console.log(urltext);
     
 };
 
