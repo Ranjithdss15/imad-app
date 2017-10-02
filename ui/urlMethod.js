@@ -19,7 +19,6 @@ shortenvar.onclick = function() {
                     var extensionIn =  request.responseText;
                     output.innerHTML = extensionIn.toString();
             console.log(urlvar);
-            
             } 
             }
         };
