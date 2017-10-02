@@ -239,6 +239,10 @@ var var1 =req.params.db;
    // console.log(res.rows[0]);
   res.send(JSON.stringify(result.rows));
   }
+  
+  
+  
+  
 });
 
 });
