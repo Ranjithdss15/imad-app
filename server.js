@@ -239,7 +239,7 @@ var var1 =req.params.db;
     alert("Error");
   } else {
    // console.log(res.rows[0]);
-  res.send(JSON.stringify(result.value));
+  res.send(JSON.stringify(result.cols));
   }
       }); 
   }
