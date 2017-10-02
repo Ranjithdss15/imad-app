@@ -18,7 +18,7 @@ shortenvar.onclick = function() {
                 if(request.status ===200){
                     var extensionIn =  request.responseText;
                     output.innerHTML = extensionIn.toString();
-            
+            console.log(urlvar);
             } 
             }
         };
