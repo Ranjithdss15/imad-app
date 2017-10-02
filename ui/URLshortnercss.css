@@ -20,11 +20,10 @@
         color:white;
         border: none;
         outline:none;
-         outline-color: #00ff00;
+         outline-color: #ffffff;
         height:20px;
         transition:height 1s;
         -webkit-transition:height 1s;
-        
-         border-style: solid;
+       
     border-color: #ffffff #ffffff;
 }
