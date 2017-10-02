@@ -20,7 +20,7 @@
         color:#d81e5;
         border: none;
         outline:none;
-        
+        height:10px;
         transition:height 1s;
         -webkit-transition:height 1s;
         
