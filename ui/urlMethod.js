@@ -9,6 +9,7 @@ shortenvar.onclick = function() {
     var urlvar = document.getElementById("url").value;
     var extvar = document.getElementById("ext").value;
     
+    
     if(urlvar!=='' && extvar!=='')
     {
         var request =new XMLHttpRequest();
@@ -17,24 +18,21 @@ shortenvar.onclick = function() {
                 if(request.status ===200){
                     
                   
-            }
+            
             } 
             }
         };
             request.open('GET','http://ranjithdss15.imad.hasura-app.io/submit-comment?comment='+commentsipvalue,true);
             request.send(null);
-    }
+}
+   
 };
 
-    
-    
-    
-    
-    
-    
-};
-
-    
+   
+   
+   
+   
+   
     var commentsop = document.getElementById('commentsoutput');
 var submitclick = document.getElementById('commentsubmit');
    submitclick.onclick = function() {
