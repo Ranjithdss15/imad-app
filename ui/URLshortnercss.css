@@ -17,9 +17,10 @@
 
 .textbox {
         background-color:rgba(0,0,0,0.2);
-        color:#d81e5;
+        color:#1e1e6d;
         border: none;
         outline:none;
+         outline-color: #00ff00;
         height:20px;
         transition:height 1s;
         -webkit-transition:height 1s;
