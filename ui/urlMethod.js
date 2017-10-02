@@ -22,7 +22,7 @@ shortenvar.onclick = function() {
             } 
             }
         };
-            request.open('GET','http://ranjithdss15.imad.hasura-app.io/urls/'+extensionIn,true);
+            request.open('GET','http://ranjithdss15.imad.hasura-app.io/urls/'+urlvar,true);
             request.send(null);
 }
    
