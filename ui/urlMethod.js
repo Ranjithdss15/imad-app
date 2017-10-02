@@ -22,6 +22,22 @@ shortenvar.onclick = function() {
         };
             request.open('GET','http://ranjithdss15.imad.hasura-app.io/urls/'+urlvar,true);
             request.send(null);
+            
+            
+                 var request2 =new XMLHttpRequest();
+        request.onreadystatechange =function() {
+            if(request2.readyState === XMLHttpRequest.DONE) {
+                if(request2.status ===200){
+                    var extensionIn =  request.responseText;
+                    output.innerHTML = extensionIn.toString();
+            console.log(urlvar);
+            } 
+            }
+        };
+            request2.open('GET','http://ranjithdss15.imad.hasura-app.io/urls/'+urlvar,true);
+            request2.send(null);
+            
+            
 }
    else
    {
