@@ -225,7 +225,7 @@ app.get('/submit-comment/', function (req, res) {
     var pool = new Pool(config);
 app.get('/testdb1/:db', function (req, res) {
 var var1 =req.params.db;
-//alert(var1);
+//
  pool.query('SELECT * FROM test order by "Name"', function(err, result) {
   if (err) {
     //console.log(err.stack);
@@ -234,6 +234,7 @@ var var1 =req.params.db;
  //res.alert("Error");
   } else {
    // console.log(res.rows[0]);
+   alert(var1);
   res.send(JSON.stringify(result.rows));
   }
 });
