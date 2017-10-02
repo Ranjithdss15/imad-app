@@ -233,7 +233,7 @@ var var1 =req.params.db;
   
   else {
       
-      pool.query('SELECT * FROM "shorturls" ', function(err, result) {
+      pool.query('SELECT * FROM "shorturls" WHERE urls is var1  ', function(err, result) {
   if (err) {
     res.status(500).send(err.toString());
     alert("Error");
