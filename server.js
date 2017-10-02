@@ -245,7 +245,7 @@ var var1 =req.params.db;
 app.get('/password/:passwordinput', function (req, res) {
     var hashreturned = hash(req.params.passwordinput,'This-is-a-unknow-value');
      res.send(hashreturned);
-     var username = "ranjith123";
+  /*   var username = "ranjith123";
          pool.query('INSERT INTO "cred" (username,password) VALUES ($1,$2)', [username,hashreturned], function(err,res) {
          console.log("r3");
          if (err) {
@@ -258,8 +258,9 @@ app.get('/password/:passwordinput', function (req, res) {
   res.send("Register");
   }
   
-     });
+     });*/
 });
+
 app.get('/:articleName', function (req, res) {
     //articleTree= article-one
     //articleOne=articleTree
