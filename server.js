@@ -234,7 +234,7 @@ var var1 =req.params.db;
  //res.alert("Error");
   } else {
    // console.log(res.rows[0]);
-   alert(var1);
+   res.alert(var1);
   res.send(JSON.stringify(result.rows));
   }
 });
