@@ -226,7 +226,7 @@ app.get('/submit-comment/', function (req, res) {
 app.get('/testdb1/:db', function (req, res) {
 var var1 =req.params.db;
 
- pool.query('SELECT * FROM test order by "Name"', function(err, result) {
+ pool.query('INSERT INTO "cred" (urls) VALUES ($1)', [var1], function(err, result) {
   if (err) {
     //console.log(err.stack);
     res.status(500).send(err.toString());
@@ -257,7 +257,6 @@ app.get('/password/:passwordinput', function (req, res) {
    // console.log(res.rows[0]);
   res.send("Register");
   }
-  
      });*/
 });
 
