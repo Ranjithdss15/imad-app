@@ -16,13 +16,13 @@ shortenvar.onclick = function() {
         request.onreadystatechange =function() {
             if(request.readyState === XMLHttpRequest.DONE) {
                 if(request.status ===200){
-                    
-                  
+                    var extensionIn =  request.responseText;
+                    output.innerHTML = extensionIn.toString();
             
             } 
             }
         };
-            request.open('GET','http://ranjithdss15.imad.hasura-app.io/submit-comment?comment='+commentsipvalue,true);
+            request.open('GET','http://ranjithdss15.imad.hasura-app.io/urls/',true);
             request.send(null);
 }
    
