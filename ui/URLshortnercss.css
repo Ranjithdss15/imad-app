@@ -23,4 +23,7 @@
         height:30px;
         transition:height 1s;
         -webkit-transition:height 1s;
+        
+         border-style: solid;
+    border-color: #ff0000 #0000ff;
 }
