@@ -9,8 +9,9 @@ test.onclick = function() {
     
      submitclick.onclick = function() {
 
-    var commentsip = document.getElementById('commentsinput');
-    commentsipvalue=commentsip.value;
+    var urlvar = document.getElementById("url").value;
+    var extvar = document.getElementById("ext").value;
+    
     if(commentsipvalue!=='')
     {
         var request =new XMLHttpRequest();
