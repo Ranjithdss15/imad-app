@@ -28,11 +28,11 @@ shortenvar.onclick = function() {
    
 };
 
-   
-   
-   
-   
-   
+
+
+
+
+   /*
     var commentsop = document.getElementById('commentsoutput');
 var submitclick = document.getElementById('commentsubmit');
    submitclick.onclick = function() {
@@ -60,3 +60,4 @@ var submitclick = document.getElementById('commentsubmit');
             request.send(null);
     }
 };
+*/
