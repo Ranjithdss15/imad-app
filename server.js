@@ -231,10 +231,16 @@ var var1 =req.params.db;
     res.status(500).send(err.toString());
     alert("Error");
   } else {
+  pool.query('SELECT * FROM "shorturls" ', function(err, result) {
+  if (err) {
+    res.status(500).send(err.toString());
+    alert("Error");
+  } else {
    // console.log(res.rows[0]);
   res.send(JSON.stringify(result.rows));
   }
 });
+
 });
 
     
