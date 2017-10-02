@@ -228,13 +228,10 @@ var var1 =req.params.db;
 
  pool.query('INSERT INTO "shorturls" (urls) VALUES ($1)', [var1], function(err, result) {
   if (err) {
-    //console.log(err.stack);
     res.status(500).send(err.toString());
     alert("Error");
- //res.alert("Error");
   } else {
    // console.log(res.rows[0]);
-   res.alert(var1);
   res.send(JSON.stringify(result.rows));
   }
 });
