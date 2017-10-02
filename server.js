@@ -221,8 +221,7 @@ app.get('/submit-comment/', function (req, res) {
     });
     
     
-   
-    var pool = new Pool(config);
+ var pool = new Pool(config);
 app.get('/testdb1/:db', function (req, res) {
 var var1 =req.params.db;
 
@@ -230,8 +229,11 @@ var var1 =req.params.db;
   if (err) {
     res.status(500).send(err.toString());
     alert("Error");
-  } else {
-  pool.query('SELECT * FROM "shorturls" ', function(err, result) {
+  } 
+  
+  else {
+      
+      pool.query('SELECT * FROM "shorturls" ', function(err, result) {
   if (err) {
     res.status(500).send(err.toString());
     alert("Error");
@@ -239,13 +241,16 @@ var var1 =req.params.db;
    // console.log(res.rows[0]);
   res.send(JSON.stringify(result.rows));
   }
+      }); 
+  }
   
-  
-  
-  
+ });
 });
 
-});
+  
+  
+
+
 
     
     
