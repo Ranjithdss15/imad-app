@@ -2,29 +2,21 @@ console.log("URL method loaded");
 
 
 
-var test = document.getElementById('shorten');
-test.onclick = function() {
+var shortenvar = document.getElementById('shorten');
+shortenvar.onclick = function() {
+    
     alert("Loaded");
-    
-    
-     submitclick.onclick = function() {
-
     var urlvar = document.getElementById("url").value;
     var extvar = document.getElementById("ext").value;
     
-    if(commentsipvalue!=='')
+    if(urlvar!=='' && extvar!=='')
     {
         var request =new XMLHttpRequest();
         request.onreadystatechange =function() {
             if(request.readyState === XMLHttpRequest.DONE) {
                 if(request.status ===200){
-                    var list = ' ';
-                var comments =  request.responseText;
-                comments=JSON.parse(comments);
-          for(var temp=0;temp<comments.length;++temp) {
-             list += ('<li>' + comments[temp]);
-              commentsop.innerHTML = list.toString();
-              commentsip.value="";
+                    
+                  
             }
             } 
             }
