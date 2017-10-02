@@ -4,7 +4,6 @@ console.log("URL method loaded");
 
 var shortenvar = document.getElementById('shorten');
 shortenvar.onclick = function() {
-
     var urlvar = document.getElementById("url").value;
     var extvar = document.getElementById("ext").value;
     
