@@ -227,13 +227,13 @@ app.get('/submit-comment/', function (req, res) {
  var pool = new Pool(config);
 app.get('/actualurls/', function (req, res) {
 var query1 =req.query.extensionIn;
- pool.query('INSERT INTO "shorturls" (extension) VALUES ($1)', [var1], function(err, result) {
+ pool.query('INSERT INTO "shorturls" (extension) VALUES ($1)', [query1], function(err, result) {
   if (err) {
     res.status(500).send(err.toString());
     alert("Error");
   } 
    else {
-      pool.query('SELECT "urls" FROM "shorturls" WHERE extension = ($1)', [var1], function(err, result) {
+      pool.query('SELECT "urls" FROM "shorturls" WHERE extension = ($1)', [query1], function(err, result) {
   if (err) {
     res.status(500).send(err.toString());
     alert("Error");
