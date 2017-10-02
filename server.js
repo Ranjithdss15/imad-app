@@ -223,10 +223,12 @@ app.get('/submit-comment/', function (req, res) {
     
     
     
+    
+    
+    
  var pool = new Pool(config);
-app.get('/testdb1/:db', function (req, res) {
-var var1 =req.params.db;
-
+app.get('/urls/:extensionIn', function (req, res) {
+var var1 =req.params.extensionIn;
  pool.query('INSERT INTO "shorturls" (extension) VALUES ($1)', [var1], function(err, result) {
   if (err) {
     res.status(500).send(err.toString());
