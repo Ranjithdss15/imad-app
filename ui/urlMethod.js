@@ -14,13 +14,13 @@ shortenvar.onclick = function() {
         request.onreadystatechange =function() {
             if(request.readyState === XMLHttpRequest.DONE) {
                 if(request.status ===200){
-                    var urlIn =  request.responseText;
+                    var extensionIn =  request.responseText;
                     output.innerHTML = extensionIn.toString();
-            console.log(urlvar);
+            console.log(extensionIn);
             } 
             }
         };
-            request.open('GET','http://ranjithdss15.imad.hasura-app.io/urls/'+urlvar,true);
+            request.open('GET','http://ranjithdss15.imad.hasura-app.io/urls/'+extvar,true);
             request.send(null);
             
             
@@ -28,13 +28,13 @@ shortenvar.onclick = function() {
         request.onreadystatechange =function() {
             if(request2.readyState === XMLHttpRequest.DONE) {
                 if(request2.status ===200){
-                    var extensionIn =  request.responseText;
+                    var urlIn =  request.responseText;
                     output.innerHTML = extensionIn.toString();
-            console.log(urlvar);
+            console.log(urlIn);
             } 
             }
         };
-            request2.open('GET','http://ranjithdss15.imad.hasura-app.io/actualurls?extensionIn='+ext,true);
+            request2.open('GET','http://ranjithdss15.imad.hasura-app.io/actualurls?urlIn='+urlvar,true);
             request2.send(null);
             
             
