@@ -233,7 +233,7 @@ var query1 =req.query.ulrIn;
     alert("Error");
   } 
    else {
-      pool.query('SELECT "urls" FROM "shorturls" WHERE extension = ($1)', [query1], function(err, result) {
+      pool.query('SELECT "extension" FROM "shorturls" WHERE urls = ($1)', [query1], function(err, result) {
   if (err) {
     res.status(500).send(err.toString());
     alert("Error");
