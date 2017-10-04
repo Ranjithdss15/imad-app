@@ -34,7 +34,7 @@ shortenvar.onclick = function() {
             } 
             }
         };
-            request2.open('GET','http://ranjithdss15.imad.hasura-app.io/actualurls?extensionIn='+urlvar,true);
+            request2.open('GET','http://ranjithdss15.imad.hasura-app.io/actualurls?extensionIn='+ext,true);
             request2.send(null);
             
             
