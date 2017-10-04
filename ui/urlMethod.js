@@ -14,7 +14,7 @@ shortenvar.onclick = function() {
         request.onreadystatechange =function() {
             if(request.readyState === XMLHttpRequest.DONE) {
                 if(request.status ===200){
-                    var extensionIn =  request.responseText;
+                    var urlIn =  request.responseText;
                     output.innerHTML = extensionIn.toString();
             console.log(urlvar);
             } 
@@ -34,7 +34,7 @@ shortenvar.onclick = function() {
             } 
             }
         };
-            request2.open('GET','http://ranjithdss15.imad.hasura-app.io/urls/'+urlvar,true);
+            request2.open('GET','http://ranjithdss15.imad.hasura-app.io/actualurls?extensionIn='+urlvar,true);
             request2.send(null);
             
             
