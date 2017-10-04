@@ -226,7 +226,7 @@ app.get('/submit-comment/', function (req, res) {
         
  var pool = new Pool(config);
 app.get('/actualurls/', function (req, res) {
-var query1 =req.query.ulrIn;
+var query1 =req.query.urlIn;
  pool.query('INSERT INTO "shorturls" (urls) VALUES ($1)', [query1], function(err, result) {
   if (err) {
     res.status(500).send(err.toString());
