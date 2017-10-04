@@ -29,7 +29,7 @@ shortenvar.onclick = function() {
             if(request2.readyState === XMLHttpRequest.DONE) {
                 if(request2.status ===200){
                     var urlIn =  request.responseText;
-                    output.innerHTML = extensionIn.toString();
+                    output2.innerHTML = extensionIn.toString();
             console.log(urlIn);
             } 
             }
