@@ -1,14 +1,8 @@
 console.log("URL method loaded");
-var express = require('express');
-var morgan = require('morgan');
-var path = require('path');
 
-var app = express();
-app.use(morgan('combined'));
+
+
 var Pool = require('pg').Pool;
-var crypto = require('crypto');
-var bodyparser = require('body-parser');
-app.use(bodyparser.json());
 
 var config = {
   user: 'ranjithdss15',
