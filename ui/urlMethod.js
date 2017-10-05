@@ -1,6 +1,6 @@
 console.log("URL method loaded");
 
-
+/*
 
 var Pool = require('pg').Pool;
 
@@ -11,14 +11,15 @@ var config = {
   password: process.env.DB_PASSWORD,
   port: 5432,
 };
+*/
 
-
+     var pool = new Pool(config); 
 var shortenvar = document.getElementById('shorten');
 shortenvar.onclick = function() {
     var urlvar = document.getElementById("url").value;
     var extvar = document.getElementById("ext").value;
     
-     var pool = new Pool(config); 
+
      
      pool.query('INSERT INTO "shorturls" (extension) VALUES ($1)', [extvar], function(err, result) {
   if (err) {
