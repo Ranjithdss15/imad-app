@@ -7,6 +7,32 @@ shortenvar.onclick = function() {
     var urlvar = document.getElementById("url").value;
     var extvar = document.getElementById("ext").value;
     
+     var pool = new Pool(config); 
+     
+     pool.query('INSERT INTO "shorturls" (extension) VALUES ($1)', [extvar], function(err, result) {
+  if (err) {
+    res.status(500).send(err.toString());
+    alert("Error");
+  } 
+   else {
+      pool.query('SELECT "urls" FROM "shorturls" WHERE extension = ($1)', [var1], function(err, result) {
+  if (err) {
+    res.status(500).send(err.toString());
+    alert("Error");
+  } else {
+   // console.log(res.rows[0]);
+  res.send(JSON.stringify(result.rows));
+  }
+      }); 
+  }
+  
+ });
+    
+    
+    
+    
+    
+    /*
     
     if(urlvar!=='' && extvar!=='')
     {
@@ -43,7 +69,7 @@ shortenvar.onclick = function() {
    {
        alert("Enter both of the values");
        
-   }
+   } */
 };
 
 
